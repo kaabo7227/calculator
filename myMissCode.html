@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script src = "System.js"></script>
+    <input id ="result" type = "text" size ="20" style = "width:208px"/>
+<br/>
+    <input type = "button" value = "7" class="btn-square-slant" onClick ="disp(7)"/> 
+    <input type = "button" value = "8" class="btn-square-slant" onClick ="disp(8)"/> 
+    <input type = "button" value = "9" class="btn-square-slant" onClick ="disp(9)"/> 
+    <input type = "button" value = "/" class="btn-square-slant" onClick ="disp('/')"/>
+<br/>
+    <input type = "button" value = "4" class="btn-square-slant" onClick ="disp(4)"/>
+    <input type = "button" value = "5" class="btn-square-slant" onClick ="disp(5)"/>
+    <input type = "button" value = "6" class="btn-square-slant" onClick ="disp(6)"/>
+    <input type = "button" value = "*" class="btn-square-slant" onClick ="disp('*')"/>
+<br/>
+    <input type = "button" value = "1" class="btn-square-slant" onClick ="disp(1)"/>
+    <input type = "button" value = "2" class="btn-square-slant" onClick ="disp(2)"/>
+    <input type = "button" value = "3" class="btn-square-slant" onClick ="disp(3)"/>
+    <input type = "button" value = "-" oclass="btn-square-slant" nClick ="disp('-')"/>
+<br>
+    <input type = "button" value = "0" class="btn-square-slant" onClick ="disp(0)"/>
+    <input type = "button" value = "C" class="btn-square-slant" onClick ="clear()"/>
+    <input type = "button" value = "=" class="btn-square-slant" onClick ="enter()"/>
+    <input type = "button" value = "+" class="btn-square-slant" onClick ="disp('+')"/>
+
+<!-- ========================================================== -->
+
+<table> <!-- 00と000の実装とボタンの大きさの統一する -->
+    <tr> 
+        <th><a href="#" type = "button" class="btn-square-slant">C</a></th>
+        <th><a href="#" class="btn-square-slant">&</a></th>
+        <th><a href="#" class="btn-square-slant">%</a></th>
+        <th><a href="#" class="btn-square-slant">÷</a></th>
+         
+    </tr>
+    <tr>
+
+        <th><a href="#" class="btn-square-slant" input type = "button" value = "7" onClick ="disp(7)">7</a></th>
+        <th><a href="#" class="btn-square-slant">8</a></th>
+        <th><a href="#" class="btn-square-slant">9</a></th>
+        <th><a href="#" class="btn-square-slant">*</a></th>
+    </tr>
+    <tr>
+        <th><a href="#" class="btn-square-slant">4</a></th>
+        <th><a href="#" class="btn-square-slant">5</a></th>
+        <th><a href="#" class="btn-square-slant">6</a></th>
+        <th><a href="#" class="btn-square-slant">-</a></th>
+    </tr>
+    <tr>
+        <th><a href="#" class="btn-square-slant">1</a></th>
+        <th><a href="#" class="btn-square-slant">2</a></th>
+        <th><a href="#" class="btn-square-slant">3</a></th>
+        <th><a href="#" class="btn-square-slant">+</a></th>
+    </tr>
+    <tr>
+        <th><a href="#" class="btn-square-slant">0</a></th>
+        <th><a href="#" class="btn-square-slant">,</a></th>
+        <th><a href="#" class="btn-square-slant">.</a></th>
+        <input type = "button" value = "=" onClick ="enter()"/>
+        <!-- <th><a href="#" class="btn-square-slant">=</a></th> -->
+    </tr>
+</table>
+
+
+<!-- 　⌘　＋　] or [ インテンド 　-->
+<style>
+
+.btn-square-slant {
+    display: inline-block;
+    position: relative;
+    padding: 0.5em 1.4em;
+    text-decoration: none;
+    background: #668ad8;/*ボタン色*/
+    color: #FFF;
+    border-bottom: solid 5px #36528c;/*ボタン色より暗めに*/
+    border-right: solid 5px #5375bd;/*ボタン色より暗めに*/
+    }
+
+    .btn-square-slant:before {  
+    content: " ";
+    position: absolute;
+    bottom: -5px;
+    left: -1px;
+    width: 0;
+    height: 0;
+    border-width: 0 6px 6px 0px;
+    border-style: solid;
+    border-color: transparent;
+    border-bottom-color: #FFF;
+    }
+
+    .btn-square-slant:after {  
+    content: " ";
+    position: absolute;
+    top: -1px;
+    right: -5px;
+    width: 0;
+    height: 0;
+    border-width: 0px 6px 6px 0px;
+    border-style: solid;
+    border-color: #FFF;
+    border-bottom-color: transparent;
+    }
+
+    .btn-square-slant:active {
+    /*ボタンを押したとき*/
+    border:none;
+    -webkit-transform: translate(6px,6px);
+    transform: translate(6px,6px);
+    }
+
+    .btn-square-slant:active:after, .butbtn-square-slantton:active:before {
+    content: none;/*ボタンを押すと線が消える*/
+    }
+    
+
+input{
+    width:50px;
+    height:50px;
+}
+textbox{
+    width:200px;
+    height:50px;
+}
+
+
+
+</style>
+
+
+</body>
+</html>
